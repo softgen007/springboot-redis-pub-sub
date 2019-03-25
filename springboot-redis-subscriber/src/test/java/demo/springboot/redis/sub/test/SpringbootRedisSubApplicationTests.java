@@ -1,4 +1,4 @@
-package com.javasampleapproach.redis.pubsub;
+package demo.springboot.redis.sub.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringDataRedisPubSubApplicationTests {
+public class SpringbootRedisSubApplicationTests {
 
 	@Test
 	public void contextLoads() {

@@ -1,4 +1,4 @@
-package com.javasampleapproach.redis.pubsub.consumer;
+package demo.springboot.redis.sub.consumer;
 
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.connection.MessageListener;

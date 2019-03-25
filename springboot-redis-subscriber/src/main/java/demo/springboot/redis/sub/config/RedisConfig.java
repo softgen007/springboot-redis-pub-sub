@@ -1,4 +1,4 @@
-package com.javasampleapproach.redis.pubsub.config;
+package demo.springboot.redis.sub.config;
 
 import java.util.concurrent.Executors;
 
@@ -12,12 +12,10 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.GenericToStringSerializer;
 
-import com.javasampleapproach.redis.pubsub.consumer.CustomerInfoSubscriber;
-import com.javasampleapproach.redis.pubsub.producer.CustomerInfoPublisher;
-import com.javasampleapproach.redis.pubsub.producer.RedisCustomerInfoPublisher;
+import demo.springboot.redis.sub.consumer.CustomerInfoSubscriber;
 
 @Configuration
-@ComponentScan("com.javasampleapproach.redis.pubsub")
+@ComponentScan("demo.springboot.redis.sub")
 public class RedisConfig {
 
 	@Bean
@@ -45,11 +43,6 @@ public class RedisConfig {
 		container.addMessageListener(messageListener(), topic());
 		container.setTaskExecutor(Executors.newFixedThreadPool(4));
 		return container;
-	}
-
-	@Bean
-	CustomerInfoPublisher redisPublisher() {
-		return new RedisCustomerInfoPublisher(redisTemplate(), topic());
 	}
 
 	@Bean

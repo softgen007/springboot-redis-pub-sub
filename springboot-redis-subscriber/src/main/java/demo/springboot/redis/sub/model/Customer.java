@@ -1,4 +1,4 @@
-package com.javasampleapproach.redis.pubsub.model;
+package demo.springboot.redis.sub.model;
 
 import java.io.Serializable;
 
